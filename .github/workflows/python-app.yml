@@ -55,7 +55,8 @@ jobs:
         docker compose -f feddit-api/docker-compose.yml up -d
     - name : run Sentiment Classifier API
       run: |
-        uvicorn ./app/main:app --host 127.0.0.1 --port 8000
+        cd app
+        uvicorn main:app --host 127.0.0.1 --port 8000
     - name: Test with pytest
       run: |
         pytest
