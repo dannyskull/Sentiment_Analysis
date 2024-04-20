@@ -14,9 +14,9 @@ The `backend.yaml` file provides accedd to `Sentiment Ananlysis` which is mentio
 
 # API Specification
 `Feddit`
-Please visit either [http://localhost:8080/docs](http://localhost:8080/docs) or [http://127.0.0.1:8080/redoc](http://0.0.0.0:8080/redoc) for the documentation of available endpoints and examples of the responses.
++ Please visit either [http://localhost:8080/docs](http://localhost:8080/docs) or [http://127.0.0.1:8080/redoc](http://0.0.0.0:8080/redoc) for the documentation of available endpoints and examples of the responses.
 `Sentiment Analysis`
-Please visit either [http://localhost:8000/docs](http://localhost:8000/docs) or [http://l27.0.0.1:8000/redoc](http://localhost:8000/redoc) for the documentation of available endpoints and examples of the responses.
++ Please visit either [http://localhost:8000/docs](http://localhost:8000/docs) or [http://l27.0.0.1:8000/redoc](http://localhost:8000/redoc) for the documentation of available endpoints and examples of the responses.
 There are 3 subfeddits available. For each subfeddit there are more than 20,000 comments, that is why we use pagination in the JSON response with the following parameters:
 + `skip` which is the number of comments to be skipped for each query
 + `limit` which is the max returned number of comments in a JSON response.
