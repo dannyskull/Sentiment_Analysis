@@ -51,7 +51,7 @@ There are 3 subfeddits available. For each subfeddit there are more than 20,000 
 
 # Run Pytest on Local machine
 To run pytest on local machine follow these steps:
-0. Install the dependencies using requirements.txt in your virtual environment.
++ Install the dependencies using requirements.txt in your virtual environment.
 1. Run the docker image of feddit api which you provided me with (I have not included the original feddit in this repo to avoid confusion) in a terminal.
 2. Do these changes in main.py as show below :
 + Change line number 33 :
