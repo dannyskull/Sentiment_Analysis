@@ -1,0 +1,19 @@
+
+services:
+    web :
+      build: .
+      container_name: "sentiment-analysis"
+      ports:
+        - 8000:8000
+      volumes:
+        - ./app/:/app
+      depends_on:
+        - feddit
+      links:
+        - feddit:feddit
+
+#       networks:
+#         - project
+# networks:
+#   project:
+#     name: project

@@ -1,13 +1,15 @@
 from fastapi.testclient import TestClient
+import requests
 
 from app.main import app
 
-client = TestClient(app,base_url="http://127.0.0.1:8000")
+client = TestClient(app,base_url="http://localhost:8000")
 
 def test_info():
 
     payload = {"topic_name":"dummy topic 1","start_dt":"","end_dt":""}
-    response = client.post("/classify/",params=payload)
+    response = client.post("/classify/",json=payload)
+    print(response.json())
     assert response.status_code == 200
-    assert response.json() == {'id': 1, 'text': 'It looks great!', 'polarity_score': 1.0}
+    assert response.json()[0] == {'id': 1, 'text': 'It looks great!', 'polarity_score': 1.0, 'sentiment': 'positive'}
     
