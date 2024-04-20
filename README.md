@@ -56,15 +56,15 @@ To run pytest on local machine follow these steps:
 2. Do these changes in main.py as show below :
 + Change line number 33 :
   + 33 `r = requests.get('http://feddit:8080/api/v1/subfeddits/',params=payload)`
-  TO
+  + TO
   + 33 `r = requests.get('http://localhost:8080/api/v1/subfeddits/',params=payload)`
 
 + AND
 
 + Change line number 55 :
-  55 `r_2 = requests.get('http://feddit:8080/api/v1/comments/',params=payload_2)`
-  TO 
-  55 `r_2 = requests.get('http://localhost:8080/api/v1/comments/',params=payload_2)`
+  + 55 `r_2 = requests.get('http://feddit:8080/api/v1/comments/',params=payload_2)`
+  + TO 
+  + 55 `r_2 = requests.get('http://localhost:8080/api/v1/comments/',params=payload_2)`
 3. Run this on a separate terminal `uvicorn app.main:app`
 4. Run this on a separate terminal `pytest`
 
