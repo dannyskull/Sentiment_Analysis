@@ -54,14 +54,14 @@ To run pytest on local machine follow these steps:
 0. Install the dependencies using requirements.txt in your virtual environment.
 1. Run the docker image of feddit api which you provided me with (I have not included the original feddit in this repo to avoid confusion) in a terminal.
 2. Do these changes in main.py as show below :
-+ Change line number 33
++ Change line number 33 :
   33 `r = requests.get('http://feddit:8080/api/v1/subfeddits/',params=payload)`
   TO
   33 `r = requests.get('http://localhost:8080/api/v1/subfeddits/',params=payload)`
 
 + AND
 
-+ Change line number 55 
++ Change line number 55 :
   55 `r_2 = requests.get('http://feddit:8080/api/v1/comments/',params=payload_2)`
   TO 
   55 `r_2 = requests.get('http://localhost:8080/api/v1/comments/',params=payload_2)`
