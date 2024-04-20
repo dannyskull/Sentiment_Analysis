@@ -18,7 +18,28 @@ Please visit either [http://localhost:8080/docs](http://localhost:8080/docs) or 
 `Sentiment Analysis`
 Please visit either [http://localhost:8000/docs](http://localhost:8000/docs) or [http://l27.0.0.1:8000/redoc](http://localhost:8000/redoc) for the documentation of available endpoints and examples of the responses.
 There are 3 subfeddits available. For each subfeddit there are more than 20,000 comments, that is why we use pagination in the JSON response with the following parameters:
++ `skip` which is the number of comments to be skipped for each query
++ `limit` which is the max returned number of comments in a JSON response.
 
+## Testing Classfify API
+### input paraments
++ `topic_name` which the subfeddit topic name
++ `star_dt` which is the start date of the date range filter
++ `end_dt` which is the start date of the date range filter
+
+### sample request body for classify
+{
+  "topic_name": "dummy topic 1",
+  "start_dt": "",
+  "end_dt": ""
+}
+#### NOTE : Please leave the date range blank if you do not want to filter by date as shown in the sample request body 
+#### NOTE : If using the date range filter use this format "dd-mm-yyyy" as shown below. Use "-" hyphen as a separator between dd, mm, and yyyy.
+{
+  "topic_name": "dummy topic 1",
+  "start_dt": "17-04-2024",
+  "end_dt": "20-04-2024"
+}
 
 # Data Schemas
 ## Classify
