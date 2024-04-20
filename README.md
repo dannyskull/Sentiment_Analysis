@@ -28,18 +28,18 @@ There are 3 subfeddits available. For each subfeddit there are more than 20,000 
 + `end_dt` which is the start date of the date range filter
 
 ### sample request body for classify
-{
+`{
   "topic_name": "dummy topic 1",
   "start_dt": "",
   "end_dt": ""
-}
+}`
 #### NOTE : Please leave the date range blank if you do not want to filter by date as shown in the sample request body 
 #### NOTE : If using the date range filter use this format "dd-mm-yyyy" as shown below. Use "-" hyphen as a separator between dd, mm, and yyyy.
-{
+`{
   "topic_name": "dummy topic 1",
   "start_dt": "17-04-2024",
   "end_dt": "20-04-2024"
-}
+}`
 
 # Data Schemas
 ## Classify
