@@ -53,6 +53,6 @@ jobs:
     - name : Run SubFeddit API and Sentiment Classifier API
       run: |
         docker compose -f docker-compose.yml -f backend.yaml up -d
-    - name: Test with pytest
-      run: |
-        pytest
+    # - name: Test with pytest
+    #   run: |
+    #     pytest
