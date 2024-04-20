@@ -30,7 +30,7 @@ app  = FastAPI()
 @app.post("/classify/")
 async def classify_subfeddit(item :Item):
     payload = {"skip":0,"limit":25}
-    r = requests.get('http://localhost:8080/api/v1/subfeddits/',params=payload)
+    r = requests.get('http://feddit:8080/api/v1/subfeddits/',params=payload)
     print("Status Code:",r.status_code)
     response = r.json()
     user_input = item.topic_name
@@ -52,7 +52,7 @@ async def classify_subfeddit(item :Item):
         raise HTTPException(status_code=404, detail="Item not found")
     else :
         payload_2 = {"skip":0,"limit":25,"subfeddit_id":search_subfeddit}
-        r_2 = requests.get('http://localhost:8080/api/v1/comments/',params=payload_2)
+        r_2 = requests.get('http://feddit:8080/api/v1/comments/',params=payload_2)
         print("Status Code:",r_2.status_code)
         response_2 = r_2.json()
         # print(type(response_2))
