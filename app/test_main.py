@@ -3,7 +3,7 @@ import requests
 
 from app.main import app
 
-client = TestClient(app,base_url="http://localhost:8000")
+client = TestClient(app)
 
 def test_info():
 
