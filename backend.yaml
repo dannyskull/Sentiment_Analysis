@@ -1,7 +1,7 @@
 
 services:
     web :
-      build: .
+      image: dannyskull007/sentiment-analysis
       container_name: "sentiment-analysis"
       ports:
         - 8000:8000
