@@ -49,3 +49,23 @@ There are 3 subfeddits available. For each subfeddit there are more than 20,000 
 + **polarity_score**: polarity score of the comment
 + **sentiment**: classification of the comment [postive/negative] based on polarity score [-1,1]
 
+# Run Pytest on Local machine
+To run pytest on local machine follow these steps:
+0. Install the dependencies using requirements.txt in your virtual environment.
+1. Run the docker image of feddit api which you provided me with (I have not included the original feddit in this repo to avoid confusion) in a terminal.
+2. Do these changes in main.py as show below :
++ Change line number 33
+  33 `r = requests.get('http://feddit:8080/api/v1/subfeddits/',params=payload)`
+  TO
+  33 `r = requests.get('http://localhost:8080/api/v1/subfeddits/',params=payload)`
+
++ AND
+
++ Change line number 55 
+  55 `r_2 = requests.get('http://feddit:8080/api/v1/comments/',params=payload_2)`
+  TO 
+  55 `r_2 = requests.get('http://localhost:8080/api/v1/comments/',params=payload_2)`
+3. Run this on a separate terminal `uvicorn app.main:app`
+4. Run this on a separate terminal `pytest`
+
+
